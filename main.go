@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"lights-on/service"
 	"log"
 	"net/http"
@@ -65,7 +64,7 @@ func main() {
 		Short: "Um app para ligar e delisgar minha luz",
 		Long:  "Um app desenvolvido com golang e cobra para desligar e ligar minha luz smart",
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Println(os.Getenv("ACCESSTOKEN"))
+			cmd.Help()
 		},
 	}
 
